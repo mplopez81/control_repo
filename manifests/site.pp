@@ -4,8 +4,5 @@ node centos74_client {
     content => 'blah',
     owner   => 'root',
   }
-  file {'/root/README':
-    owner => 'root',
-  }
 }
 
