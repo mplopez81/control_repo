@@ -11,7 +11,7 @@ node centos74_client {
   
   service { 'httpd':
      ensure  => running,
-     enabled => true,
+     enable => true,
    }
    
 }
