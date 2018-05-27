@@ -1,8 +1,18 @@
 node centos74_client {
-  file {'/root/README':
-    ensure  => file,
-    content => 'blah',
-    owner   => 'root',
+  
+  package {'httpd':
+    ensure => installed,
   }
+  
+  file {'/var/www/html/index.html':
+    ensure  => file,
+    content => '<h1>Hello World!</h1',
+  }
+  
+  service {'httpd':
+     ensure  => running,
+     enabled => true,
+   }
+   
 }
 
