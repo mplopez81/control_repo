@@ -6,7 +6,7 @@ node centos74_client {
   
   file { '/var/www/html/index.html':
     ensure  => file,
-    content => "<h1>Hello World! Hostname ${fdqn}</h1\n",
+    content => "<h1>Hello World! Hostname ${ipaddress}</h1\n",
   }
   
   service { 'httpd':
